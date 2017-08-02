@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="styles/listado-puesta-en-marcha.css"/>
+    <link rel="stylesheet" href="styles/jquery-ui.css"/>
+    
+    <title>Lista de chequeo para puesta en marcha</title>
+    
+    
+</head>
+
+<body>
+    <header>
+        <div class="central-column">
+            <img id="logo" src="images/indiv-logo.png" alt="logo INDIV"/>
+            <h2>Lista de chequeo para puesta en marcha</h2>
+        </div>
+    </header>
+        
+    <div class="central-column">
+        <form>
+            <div>
+                <h2>Datos cliente</h2>
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Razón Social: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <input type="text" id="cliente">
+                    </div>
+                </div>
+                
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Responsable en granja: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <input type="text" id="responsable-granja">
+                    </div>
+                </div>
+                
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Ubicación de granja: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <input type="text" id="localidad">
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h2>Datos técnico INDIV</h2>
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Nombre: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <input type="text" id="tecnico-INDIV">
+                    </div>
+                </div>
+                
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Fecha de visita: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <input type="text" id="fecha-visita">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2>Datos de la granja</h2>
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Tipo de granja: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <select name="tipo-granja">
+                            <option value="avicola">Avícola</option>
+                            <option value="porcina">Porcina</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="label-div">
+                        <span>Etapa productiva: </span>
+                    </div>
+                    <div class="inputs-div">
+                        <!-- Avícola -->
+                        <label class="ep-avicola"><input type="radio" name="etapa-productiva" value="parrilleros"> <span>Parrilleros</span></label>
+                        <label class="ep-avicola"><input type="radio" name="etapa-productiva" value="ponedoras"> <span>Ponedoras</span></label>
+                        <label class="ep-avicola"><input type="radio" name="etapa-productiva" value="reproductoras"> <span>Reproductoras</span></label>
+                        
+                        <!-- Porcinos -->
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="gestacion"> <span>Gestación</span></label>
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="maternidad"> <span>Maternidad</span></label>
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="destete"> <span>Destete</span></label>
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="engorde"> <span>Engorde</span></label>
+                    </div>
+                </div>
+                <div class="fila-input opciones-porcinos">
+                    <div class="label-div"></div>
+                    <div class="inputs-div">
+                        <!-- Porcinos -->
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="wtf"> <span>WTF</span></label>
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="cachorrera"> <span>Cachorrera</span></label>
+                        <label class="ep-porcino"><input type="radio" name="etapa-productiva" value="padrillera"> <span>Padrillera</span></label>
+                    </div>
+                </div>
+                
+            </div>
+
+            <hr/>
+
+            <div>
+                <h2>Trabajos realizados</h2>
+                <p id="p-info">Tilde la opcion que corresponda</p>
+                
+                
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><span>Si</span></div>
+                        <div class="option"><span>No</span></div>
+                        <div class="option"><span>N/E</span></div>
+                    </div>
+                    <div class="inputs-div">
+                        
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="conexionado-controlador-tablero" value="Si"></div>
+                        <div class="option"><input type="radio" name="conexionado-controlador-tablero" value="No"></div>
+                        <div class="option"><input type="radio" name="conexionado-controlador-tablero" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Conexionado del controlador al tablero.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="conexionado-sensores-controlador" value="Si"></div>
+                        <div class="option"><input type="radio" name="conexionado-sensores-controlador" value="No"></div>
+                        <div class="option"><input type="radio" name="conexionado-sensores-controlador" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Conexionado de sensores al controlador.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="conexionado-termostado-tablero" value="Si"></div>
+                        <div class="option"><input type="radio" name="conexionado-termostado-tablero" value="No"></div>
+                        <div class="option"><input type="radio" name="conexionado-termostado-tablero" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Conexionado de termostato al tablero (by-pass de seguridad).</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="conexionado-termostado-caidacort" value="Si"></div>
+                        <div class="option"><input type="radio" name="conexionado-termostado-caidacort" value="No"></div>
+                        <div class="option"><input type="radio" name="conexionado-termostado-caidacort" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Conexionado de termostato a la caída de cortina.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="conexionado-dimmer-controlador" value="Si"></div>
+                        <div class="option"><input type="radio" name="conexionado-dimmer-controlador" value="No"></div>
+                        <div class="option"><input type="radio" name="conexionado-dimmer-controlador" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Conexionado del dimmer al controlador.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-motores-alimentacion" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-motores-alimentacion" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-motores-alimentacion" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento de motores de línea de alimentación y control de cortes de llenado.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-bombas" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-bombas" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-bombas" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento de bombas.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="regulacion-presion-fogger" value="Si"></div>
+                        <div class="option"><input type="radio" name="regulacion-presion-fogger" value="No"></div>
+                        <div class="option"><input type="radio" name="regulacion-presion-fogger" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Regulación de presión de sistema fogger.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="regulacion-flotante-paneles" value="Si"></div>
+                        <div class="option"><input type="radio" name="regulacion-flotante-paneles" value="No"></div>
+                        <div class="option"><input type="radio" name="regulacion-flotante-paneles" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Regulación de flotante en tanque de paneles evaporativos.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-maquinas-cortina-inlets" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-maquinas-cortina-inlets" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-maquinas-cortina-inlets" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento y calibración de máquinas de cortinas e inlets.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-bebederos" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-bebederos" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-bebederos" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento de bebederos.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-calefaccion" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-calefaccion" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-calefaccion" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento de sistema de calefacción.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="regulacion-presion-bebederos" value="Si"></div>
+                        <div class="option"><input type="radio" name="regulacion-presion-bebederos" value="No"></div>
+                        <div class="option"><input type="radio" name="regulacion-presion-bebederos" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Regulación de presión de bebederos (solamente avicultura).</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-medicador" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-medicador" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-medicador" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento del medicador.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-alarma-bocina-cargador" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-alarma-bocina-cargador" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-alarma-bocina-cargador" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de funcionamiento de alarma / bocina / cargador.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="chequeo-carga-bateria" value="Si"></div>
+                        <div class="option"><input type="radio" name="chequeo-carga-bateria" value="No"></div>
+                        <div class="option"><input type="radio" name="chequeo-carga-bateria" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Chequeo de carga de batería.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="explicacion-controlador" value="Si"></div>
+                        <div class="option"><input type="radio" name="explicacion-controlador" value="No"></div>
+                        <div class="option"><input type="radio" name="explicacion-controlador" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Explicación del funcionamiento de la lógica del controlador.</span>
+                    </div>
+                </div>
+
+                <div class="fila-input">
+                    <div class="options-div">
+                        <div class="option"><input type="radio" name="programacion-controlador" value="Si"></div>
+                        <div class="option"><input type="radio" name="programacion-controlador" value="No"></div>
+                        <div class="option"><input type="radio" name="programacion-controlador" value="No existe"></div>
+                    </div>
+                    <div class="inputs-div">
+                        <span>Programación estándar del controlador.</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <h2>Observaciones generales</h2>
+                <div class="observaciones-input">
+                    <textarea></textarea>
+                </div>
+            </div>
+
+            <div class="button-div">
+                <input type="submit" id="submit-button" class="" value="Cargar formulario" />
+
+            </div>
+        </form>
+    </div>
+    
+    <script src="scripts/jquery.js"></script>
+    <script src="scripts/jquery-ui.js"></script>
+    <script src="scripts/script-listado-puesta-marcha.js"></script>
+    <script>
+        $( function() {
+            $( "#fecha-visita" ).datepicker({dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"], monthNames: [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ],showOtherMonths: true,selectOtherMonths: true});
+            $( "#fecha-visita" ).datepicker( "option", "dateFormat", "dd/mm/yy" );
+
+        } );
+    </script>
+    
+</body>
+    
+</html>

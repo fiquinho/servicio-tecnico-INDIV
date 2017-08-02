@@ -1,0 +1,39 @@
+:root {
+    --color-principal: #991f23;
+    --color-acentuado: #f8971d;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--color-principal);
+    display: flex;
+    align-content: center;
+    vertical-align: middle;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-information {
+    text-align: center;
+    margin: auto;
+    width: 400px;
+    height: 300px;
+    background-color: #fff;
+    border: 5px solid var(--color-acentuado);
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 10px 10px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.login-information h2 {
+    color: var(--color-principal);
+}
+
+hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid var(--color-acentuado);
+    margin: 1em 0;
+    padding: 0; 
+}
