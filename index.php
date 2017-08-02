@@ -15,5 +15,9 @@
         <h2>Ingrese con su usuario</h2>
         <hr/>
         <p>Usuario:</p>
+        <p><input type="text" name="user"></p>
+        <p>Contraseña:</p>
+        <p><input type="password" name="passwaord"></p>
+        <button class="login-button">Ingresar</button>
     </div>
 </html>
