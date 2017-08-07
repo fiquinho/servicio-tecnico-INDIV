@@ -11,6 +11,9 @@
 <body>
     
 </body>
+    <div class="logo">
+        <img id="logo" src="images/indiv-logo.png" alt="INDIV logo" />
+    </div>
     <div class="login-information">
         <h2>Ingrese con su usuario</h2>
         <hr/>
