@@ -38,7 +38,7 @@
                 
                 /* If the user exist, set the sessions variables */
                 } else {
-                    $_SESSION['username'] = $row[0];
+                    $_SESSION['username'] = $row[1];
                 }
         
             } else {
