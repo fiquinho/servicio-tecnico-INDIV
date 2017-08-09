@@ -1,5 +1,5 @@
 <?php
-
+    /* Check if there is a session open */
     session_start();
     
     if (isset($_SESSION['username'])) {
@@ -28,9 +28,17 @@
         <h2>Ingrese con su usuario</h2>
         <hr/>
         <p>Usuario:</p>
-        <p><input type="text" id="user"></p>
+        <p>
+            <input type="text" id="user">
+            <br/>
+            <span class="error-message user"></span>
+        </p>
         <p>Contraseña:</p>
-        <p><input type="password" id="password"></p>
+        <p>
+            <input type="password" id="password">
+            <br/>
+            <span class="error-message password"></span>
+        </p>
         <button class="login-button">Ingresar</button>
 
     </div>
@@ -40,6 +48,9 @@
     <script src="scripts/jquery.js"></script>
     <script type="text/javascript">
         $(".login-button").click(function(){
+            $(".user").html("");
+            $(".password").html("");
+
             var username = $("#user").val();
             var password = $("#password").val();
             $.ajax({
@@ -48,7 +59,20 @@
                 data: { username: username,
                         password: password }
             }).done(function( response ) {
-                $("#alert").html(response);
+                switch(response) {
+                    case "No username":
+                        $(".user").html("Por favor ingrese su usuario");
+                        break;
+                    case "No password":
+                        $(".password").html("Por favor ingrese su contraseña");
+                        break;
+                    case "Wrong user":
+                        $(".user").html("El usuario no se encuentra registrado");
+                        break;
+                    default:
+                        window.location = 'login.php'
+                        break;
+                }
             });    
         });
     </script>

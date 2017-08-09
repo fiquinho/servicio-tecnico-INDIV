@@ -74,3 +74,10 @@ hr {
 #logo {
     width: 300px;
 }
+
+.error-message {
+    display: inline-block;
+    font-size: 0.8em;
+    color: darkred;
+    height: 0.8em;
+}

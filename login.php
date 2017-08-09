@@ -2,29 +2,27 @@
 
     session_start();
 
-    if ($_SESSION['username']) {
+    /* Preventing direct url access to this file */
+    if ($_SERVER['REQUEST_METHOD']!='POST' && realpath(__FILE__) == realpath($_SERVER['SCRIPT_FILENAME'])) {
+        header('HTTP/1.0 403 Forbidden', TRUE, 403);
 
-        echo "You are logged in as: ".$_SESSION['username'];
-
-        mysqli_connect("mysql.stackcp.com", "indiv-users-31379301", "QYSkEgwB+tp9", "indiv-users-31379301", "49379");
-
-        if (mysqli_connect_error()) {
-            
-            echo "There was an error connecting to the database";
-            
-        } else {
-            
-            echo "Database connection successful!";
-            
-        }
-    
-    } else {
-
-        header("Location: index.php");
-
+        /* Redirects the user to index.php */
+        die(header('location: index.php'));
     }
 
-    
-
-
+    echo $_SESSION['username'];
 ?>
+
+<button>Log out</button>
+
+<script src="scripts/jquery.js"></script>
+<script type="text/javascript">
+    $("button").click(function() {
+        $.ajax({
+            type: "POST",
+            url: "logout.php",
+        }).done(function( response ) {
+            window.location = 'index.php';
+        });    
+    });
+</script>
