@@ -36,9 +36,17 @@
                 if ($row[0] == "") {
                     echo "Wrong user";
                 
-                /* If the user exist, set the sessions variables */
+                /* If the user exist... */
                 } else {
-                    $_SESSION['username'] = $row[1];
+                    
+                    if (password_verify($password, $row[2])) {
+                        /* If the password is correct, set the session variables */
+                        $_SESSION['username'] = $row[1];
+                    } else {
+                        echo "Wrong password";
+                    }
+
+                   
                 }
         
             } else {
