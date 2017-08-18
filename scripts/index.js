@@ -24,7 +24,7 @@ $(".login-button").click(function(){
                         $(".password").html("La contraseña ingresada no es válida");
                         break;
                     default:
-                        window.location = 'login.php'
+                        window.location = 'dashboard/dashboard.php'
                         break;
                 }
             });    
