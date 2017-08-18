@@ -30,6 +30,8 @@
     <link href="styles/toolkit-inverse.min.css" rel="stylesheet">
     <link href="assets/css/application.css" rel="stylesheet">
     <link href="styles/dashboard-custom-style.css" rel="stylesheet">
+    <link href="components-styles/sidebar.css" rel="stylesheet">
+
 
   </head>
 
@@ -37,6 +39,8 @@
   <div class="container">
     
     <div class="row">
+
+      <!-- Include sidebar -->
       <?php include 'components-files/sidebar.php'?>
 
       <div class="col-md-9 content">

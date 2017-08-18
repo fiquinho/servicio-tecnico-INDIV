@@ -1,0 +1,76 @@
+.user-img {
+    border-radius: 50%;
+}
+
+.sidebar-nav {
+    margin-right: 0px;
+}
+
+.sidebar-header {
+    display: flex;
+    vertical-align: middle;
+    padding-bottom: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: var(--color-principal);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.user-information p {
+    margin: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: var(--color-fondo);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.user-information {
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .user-information {
+        margin-left: 20px;
+    }
+}
+
+.user-rol {
+    font-size: 0.8em;
+    font-style: italic;
+    color: var(--color-letras);
+    font-weight: normal;
+}
+
+.nav>.nav-header {
+    color: var(--color-letras);
+    font-weight: bold;
+}
+
+.nav>li>a {
+    color: var(--color-letras);
+}
+
+.nav>li>a:focus {
+    color: var(--color-letras);
+}
+
+.nav>li>a:hover {
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+.nav-pills .nav-link.active {
+    color: var(--color-principal);
+    background-color: var(--color-acentuado);
+    font-weight: bold;
+}
+
+a:not([href]):not([tabindex]):hover {
+    color: var(--color-principal);
+    font-weight: bold;
+}
