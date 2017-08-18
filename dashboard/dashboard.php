@@ -32,7 +32,6 @@
     <link href="styles/dashboard-custom-style.css" rel="stylesheet">
     <link href="components-styles/sidebar.css" rel="stylesheet">
 
-
   </head>
 
 <body>

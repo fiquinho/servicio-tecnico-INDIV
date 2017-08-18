@@ -24,28 +24,28 @@
             <ul class="nav nav-pills nav-stacked flex-column">
               <li class="nav-header">Panel de control</li>
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">General</a>
+                <span class="nav-link active">General</span>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="order-history/index.html">Servicio técnico</a>
+                <span class="nav-link">Servicio técnico</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link "href="fluid/index.html">Fluid layout</a>
+                <span class="nav-link">Fluid layout</span>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="icon-nav/index.html">Icon nav</a>
+                <span class="nav-link">Icon nav</span>
               </li>
 
               <li class="nav-header">Usuario</li>
               <li class="nav-item">
-                <a class="nav-link "href="#">
+                <span class="nav-link">
                   Editar perfil
-                </a>
+                </span>
               </li>
               <li class="nav-item">
-                <a class="nav-link log-out">
+                <span class="nav-link log-out">
                   Salir de la cuenta
-                </a>
+                </span>
               </li>
             </ul>
             <hr class="visible-xs mt-3">
