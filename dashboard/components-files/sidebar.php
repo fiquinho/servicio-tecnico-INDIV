@@ -9,12 +9,12 @@
             </button>
 
             <!-- User profile -->
-            <a class="sidebar-brand img-responsive" href="dashboard.php">
-              <img class="user-img" src="profile-images/sergiobonato.png">
-              <!-- <span class="icon icon-leaf sidebar-brand-icon"></span> -->
-            </a>
-            <div class="user-information">
-              <p><span class="username"><?php echo $user; ?></span></p>
+            <div class="user-information user-image">
+              <div class="circular-image">
+              </div>
+            </div>
+            <div class="user-information user-name">
+              <p><span class="username"><?php echo $user_first_name." ".$user_last_name; ?></span></p>
               <p><span class="user-rol">Administrador</span></p>
             </div>
           </div>

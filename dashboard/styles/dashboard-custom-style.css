@@ -1,0 +1,32 @@
+:root {
+    --color-principal: #991f23;
+    --color-acentuado: #f8971d;
+    --color-letras: #000000;
+    --color-fondo: #e8e3dc;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-letras);
+}
+
+@media (min-width: 768px) {
+    body {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid var(--color-principal);
+}
+
+.dashhead-subtitle {
+    color: var(--color-letras);
+}

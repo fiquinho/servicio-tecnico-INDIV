@@ -1,29 +1,17 @@
-.user-img {
-    border-radius: 50%;
-}
-
 .sidebar-nav {
     margin-right: 0px;
 }
 
 .sidebar-header {
     display: flex;
+    flex-direction: column;
     vertical-align: middle;
     padding-bottom: 0px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 15px;
     background-color: var(--color-principal);
     border-radius: 5px;
     width: 100%;
-}
-
-.user-information p {
-    margin: auto;
-    margin-bottom: auto;
-    margin-top: auto;
-    color: var(--color-fondo);
-    font-size: 1.2em;
-    font-weight: bold;
 }
 
 .user-information {
@@ -31,12 +19,46 @@
     flex-direction: column;
     vertical-align: middle;
     margin: auto;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-    .user-information {
-        margin-left: 20px;
+.circular-image {
+    border-radius: 50%;
+    width: 100%;
+    padding-bottom: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+    background-image: url("../profile-images/sergiobonato.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% auto;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 767px) {
+    .sidebar-header {
+        flex-direction: row;
+        height: 15%;
     }
+
+    .user-information.user-image {
+        max-width: 120px;
+        margin: auto auto auto 0;
+    }
+
+    .circular-image {
+        margin-bottom: 0;
+    }
+}
+
+.user-information p {
+    height: fit-content;
+    margin: auto;
+    margin-bottom: auto;
+    margin-top: auto;
+    color: var(--color-fondo);
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .user-rol {
