@@ -44,6 +44,7 @@
                         $_SESSION['username'] = $row[1];
                         $_SESSION['user_first_name'] = $row[3];
                         $_SESSION['user_last_name'] = $row[4];
+                        $_SESSION['permissions'] = $row[5];
                     } else {
                         echo "Wrong password";
                     }

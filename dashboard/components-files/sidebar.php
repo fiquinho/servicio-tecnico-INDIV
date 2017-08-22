@@ -5,12 +5,12 @@
 
             <!-- User profile -->
             <div class="user-information user-image">
-              <div class="circular-image">
+              <div class="circular-image" <?php echo 'style="background-image: url(../dashboard/profile-images/'.$username.'.png)"' ?>>
               </div>
             </div>
             <div class="user-information user-name">
               <p><span class="username"><?php echo $user_first_name." ".$user_last_name; ?></span></p>
-              <p><span class="user-rol">Administrador</span></p>
+              <p><span class="user-rol"><?php echo $permissions; ?></span></p>
               <!-- Menu button -->
               <button class="nav-toggler nav-toggler-md sidebar-toggler" type="button" data-toggle="collapse" data-target="#nav-toggleable-md" aria-expanded="false"> menú <span class="icon icon-list"></span>
               </button>

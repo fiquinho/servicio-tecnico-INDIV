@@ -28,10 +28,10 @@
     padding-bottom: 100%;
     overflow: hidden;
     border-radius: 50%;
-    background-image: url("../profile-images/sergiobonato.png");
+    /* background-image: url("../profile-images/sergiobonato.png"); */
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: 100% auto;
+    background-size: cover;
     margin-bottom: 15px;
 }
 

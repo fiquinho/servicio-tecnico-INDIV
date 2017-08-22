@@ -7,6 +7,10 @@
     $username = $_SESSION['username'];
     $user_first_name = $_SESSION['user_first_name'];
     $user_last_name = $_SESSION['user_last_name'];
+
+    if ($_SESSION['permissions'] == 1) {
+      $permissions = 'Administrador';
+    }
   }
     
 ?>
