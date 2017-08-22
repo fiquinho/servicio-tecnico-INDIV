@@ -4,7 +4,9 @@
   if (!isset($_SESSION['username'])) {
       header("Location: ../index.php");
   } else {
-    $user = $_SESSION['username'];
+    $username = $_SESSION['username'];
+    $user_first_name = $_SESSION['user_first_name'];
+    $user_last_name = $_SESSION['user_last_name'];
   }
     
 ?>

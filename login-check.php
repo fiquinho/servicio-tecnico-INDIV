@@ -42,6 +42,8 @@
                     if (password_verify($password, $row[2])) {
                         /* If the password is correct, set the session variables */
                         $_SESSION['username'] = $row[1];
+                        $_SESSION['user_first_name'] = $row[3];
+                        $_SESSION['user_last_name'] = $row[4];
                     } else {
                         echo "Wrong password";
                     }
