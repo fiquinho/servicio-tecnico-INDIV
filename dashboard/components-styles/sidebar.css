@@ -92,3 +92,31 @@
     background-color: var(--color-acentuado);
     font-weight: bold;
 }
+
+.sidebar-toggler {
+    position: initial;
+    margin: 5px auto auto auto;
+    width: fit-content;
+    padding: 5px 10px;
+    font-size: 0.9em;
+    color: #fff;
+    background-color: #434857;
+    border: 1px solid #434857;
+}
+
+.sidebar-toggler[aria-expanded="false"]:before {
+    content: "Abrir ";
+}
+
+.sidebar-toggler[aria-expanded="true"]:before {
+    content: "Cerrar ";
+}
+
+.sidebar-toggler:hover {
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+}
+
+.sidebar-toggler:focus {
+    outline: none;  
+}
